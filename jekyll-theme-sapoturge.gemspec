@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  s.name          = 'jekyll-theme-modernist'
+  s.name          = 'jekyll-theme-sapoturge'
   s.version       = '0.1.1'
   s.license       = 'CC0-1.0'
-  s.authors       = ['Steve Smith', 'GitHub, Inc.']
+  s.authors       = ['John Hiatt', 'Steve Smith', 'GitHub, Inc.']
   s.email         = ['opensource+jekyll-theme-modernist@github.com']
   s.homepage      = 'https://github.com/pages-themes/modernist'
   s.summary       = 'Modernist is a Jekyll theme for GitHub Pages'
