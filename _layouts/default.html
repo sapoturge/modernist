@@ -30,6 +30,14 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
+      
+      {% if site.navbar %}
+      <header class="navbar">
+        {% capture navbar %}{% include {{ site.navbar }} %}{% endcapture %}
+        {{ navbar | markdownify }}
+      </header>
+      {% endif %}
+      
       <section>
 
       {{ content }}
