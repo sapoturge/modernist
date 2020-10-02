@@ -1,6 +1,6 @@
 # The Modernist theme
 
-[![Build Status](https://travis-ci.org/pages-themes/modernist.svg?branch=master)](https://travis-ci.org/pages-themes/modernist) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-modernist.svg)](https://badge.fury.io/rb/jekyll-theme-modernist)
+[![Build Status](https://travis-ci.org/sapoturge/modernist.svg?branch=master)](https://travis-ci.org/sapoturge/modernist) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-sapoturge.svg)](https://badge.fury.io/rb/jekyll-theme-sapoturge)
 
 *Modernist is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/modernist), or even [use it today](#usage).*
 
@@ -38,6 +38,7 @@ Additionally, you may choose to set the following optional variables:
 ```yml
 show_downloads: ["true" or "false" to indicate whether to provide a download URL]
 google_analytics: [Your Google Analytics tracking ID]
+navbar: [The name of a file to include as the navigation. It should be an unordered list with links to each page]
 ```
 
 ### Stylesheet
