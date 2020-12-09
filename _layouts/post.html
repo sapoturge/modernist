@@ -39,18 +39,20 @@
       </header>
       <section>
 
+	<h1>{{ page.title }}</h1>
+
         {{ content }}
 
         {% if page.next or page.previous %}
         <header class="navbar">
           {% if page.previous %}
           <ul class="previous">
-            <li><a href="{{ site.url }}{{ page.previous }}"><strong>{{ page.previous-text }}</strong></a></li>
+            <li><a href="{{ site.url }}{{ page.previous.url }}"><strong>{{ page.previous.title }}</strong></a></li>
           </ul>
           {% endif %}
           {% if page.next %}
           <ul class="next">
-            <li><a href="{{ site.url }}{{ page.next }}"><strong>{{ page.next-text }}</strong></a></li>
+            <li><a href="{{ site.url }}{{ page.next.url }}"><strong>{{ page.next.title }}</strong></a></li>
           </ul>
           {% endif %}
         </header>
