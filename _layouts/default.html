@@ -17,6 +17,9 @@
   <body>
     <div class="wrapper">
       <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
+	{% if site.icon %}
+	<img src="{{ site.icon }}" class="icon">
+	{% endif %}
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         {% if site.description or site.github.project_tagline %}
           <p>{{ site.description | default: site.github.project_tagline }}</p>
@@ -30,18 +33,29 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
-      
-      {% if site.navbar %}
       <header class="navbar">
-        {% capture navbar %}{% include {{ site.navbar }} %}{% endcapture %}
+        {%capture navbar %}{% include navbar.md %}{%endcapture %}
         {{ navbar | markdownify }}
       </header>
-      {% endif %}
-      
       <section>
 
-      {{ content }}
+        {{ content }}
 
+        {% if page.previous or page.next %}
+        <header class="navbar">
+          {% if page.previous %}
+          <ul class="previous">
+            <li><a href="{{ site.url }}{{ page.previous }}"><strong>{{ page.previous_text }}</strong></a></li>
+          </ul>
+          {% endif %}
+          {% if page.next %}
+          <ul>
+            <li><a href="{{ site.url }}{{ page.next }}"><strong>{{ page.next_text }}</strong></a></li>
+          </ul>
+          {% endif %}
+        </header>
+        {% endif %}
+        <div class="spacer"></div>
       </section>
     </div>
     <footer>
