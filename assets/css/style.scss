@@ -4,21 +4,20 @@
 @import "{{ site.theme }}";
 
 header {
-	background: #C2FA96;
-	background: linear_gradient(#DDFCDD, #C6FAC6);
+	background: {{ site.background-color | default: "#72f23f" }};
 
 	h1 {
-		color:#690;
+		color: {{ site.title-color | default: "#3fbf26" }};
 	}
 
 	.icon {
 		float:left;
-		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
 strong {
-	color: #242;
+	color: {{ site.bold-color | default: "#242" }};
 }
 
 ol ol {
