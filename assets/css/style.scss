@@ -25,7 +25,6 @@ ol ol {
 }
 
 .navbar {
-	background-color: #5198DF;
 	border-radius: 0px;
 	padding: 0;
 
@@ -37,6 +36,18 @@ ol ol {
 			width: unset;
 			padding: 0 10px;
 		}
+	}
+}
+
+header ul {
+	background-color: {{ site.list-color | default: "#5198DF" }};
+
+	li {
+		border-right-color: {{ site.list-border-color | default: "#3A7CBE" }};
+	}
+
+	li + li {
+		border-left-color: {{ site.list-border-color-light | default: "#8BBEF3" }};
 	}
 }
 
