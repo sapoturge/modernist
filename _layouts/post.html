@@ -47,12 +47,12 @@
         <header class="navbar">
           {% if page.previous %}
           <ul class="previous">
-            <li><a href="{{ site.url }}{{ page.previous.url }}"><strong>{{ page.previous.title }}</strong></a></li>
+            <li><a href="{{ site.url }}{{ page.previous.url }}"><strong><span class="prefix">Previous:</span> {{ page.previous.title }}</strong></a></li>
           </ul>
           {% endif %}
           {% if page.next %}
           <ul class="next">
-            <li><a href="{{ site.url }}{{ page.next.url }}"><strong>{{ page.next.title }}</strong></a></li>
+            <li><a href="{{ site.url }}{{ page.next.url }}"><strong><span class="prefix">Next:</span> {{ page.next.title }}</strong></a></li>
           </ul>
           {% endif %}
         </header>

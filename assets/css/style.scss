@@ -25,6 +25,7 @@ ol ol {
 }
 
 .navbar {
+	background: none;
 	border-radius: 0px;
 	padding: 0;
 
@@ -78,4 +79,33 @@ ol li {
 
 .spacer {
 	height: 54px;
+}
+
+.prefix {
+	display: none;
+}
+
+@media screen and (max-width: 740px) {
+	.navbar ul {
+		display: block;
+		position: static;
+	}
+
+	.navbar .previous, .navbar .next {
+		height: auto;
+		li {
+			width: 100%;
+			height: auto;
+			float: none;
+			box-sizing: border-box;
+			border: none;
+			.prefix {
+				display: inline-block;
+			}
+			a {
+				height: auto;
+				padding-bottom: 6px;
+			}
+		}
+	}
 }
