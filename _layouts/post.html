@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% if site.tabicon %}
-    <link rel="icon" href="{{ site.tabicon }}">
+    <link rel="icon" href="{{ site.tabicon | relative_url }}">
     {% endif %}
 
 {% seo %}
@@ -22,7 +22,7 @@
       <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
 	<a href="{{ site.baseurl | default: "/" }}">
         {% if site.icon %}
-        <img src="{{ site.icon }}" class="icon">
+        <img src="{{ site.icon | relative_url }}" class="icon">
         {% endif %}
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         {% if site.description or site.github.project_tagline %}
@@ -52,12 +52,12 @@
         <header class="navbar">
           {% if page.previous %}
           <ul class="previous">
-            <li><a href="{{ site.url }}{{ page.previous.url }}"><strong><span class="prefix">Previous:</span> {{ page.previous.title }}</strong></a></li>
+            <li><a href="{{ page.previous.url | relative_url }}"><strong><span class="prefix">Previous:</span> {{ page.previous.title }}</strong></a></li>
           </ul>
           {% endif %}
           {% if page.next %}
           <ul class="next">
-            <li><a href="{{ site.url }}{{ page.next.url }}"><strong><span class="prefix">Next:</span> {{ page.next.title }}</strong></a></li>
+            <li><a href="{{ page.next.url | relative_url }}"><strong><span class="prefix">Next:</span> {{ page.next.title }}</strong></a></li>
           </ul>
           {% endif %}
         </header>
