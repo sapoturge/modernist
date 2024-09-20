@@ -65,6 +65,17 @@
         {% endif %}
       </section>
     </div>
+    <header class="versions">
+      <ul>
+	      <li class="header"><a><strong>Version</strong></a></li>
+      {% for version in site.doc_versions reversed %}
+      <li {% if version.name == page.version %}class="current_version"{% endif %}><a href="{{ '/docs/' | append: version.name | relative_path }}/"><strong>{{ version.name }}
+          {%- if version.name == site.latest %} (latest){% endif -%}
+          {%- if version.name == site.dev %} (dev){% endif -%}
+		      </strong></a></li>
+      {% endfor %}
+      </ul>
+    </header>
     <footer>
     {% if site.github.is_project_page %}
       <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>

@@ -30,25 +30,56 @@ ol ol {
 	padding: 0;
 
 	ul {
+	  background-color: {{ site.list-color | default: "#5198DF" }};
 		height: 28px;
 
 		li {
+		border-right-color: {{ site.list-border-color | default: "#3A7CBE" }};
 			height: 28px;
 			width: unset;
 			padding: 0 10px;
 		}
+	li + li {
+		border-left-color: {{ site.list-border-color-light | default: "#8BBEF3" }};
+	}
 	}
 }
 
-header ul {
-	background-color: {{ site.list-color | default: "#5198DF" }};
+.versions {
+  position: sticky;
+        float: right;
+	background: none;
+	border-radius: 0px;
+	padding: 0;
+        bottom: 120px;
 
-	li {
-		border-right-color: {{ site.list-border-color | default: "#3A7CBE" }};
-	}
+	ul {
+	  background-color: {{ site.list-color | default: "#5198DF" }};
+          height: unset;
+
+		li {
+			height: 28px;
+			float: none;
+			padding: 0 10px;
+		border-bottom: 1px solid {{ site.list-border-color | default: "#3A7CBE" }};
+              }
+
+              li.header {
+                border-radius: 4px;
+                background-color: {{ site.background-color | default: "#72f23f" }};
+                a strong { color: {{ site.bold_color | default: "#242" }}; }
+              }
+
+              li.current_version {
+                background-color: {{ site.background-color | default: "#72f23f" }};
+                a strong { color: {{ site.bold_color | default: "#242" }}; }
+                border-radius: 4px;
+              }
 
 	li + li {
-		border-left-color: {{ site.list-border-color-light | default: "#8BBEF3" }};
+		border-top: 1px solid {{ site.list-border-color-light | default: "#8BBEF3" }};
+                border-left: none;
+              }
 	}
 }
 
