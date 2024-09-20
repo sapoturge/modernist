@@ -69,7 +69,7 @@
       <ul>
 	      <li class="header"><a><strong>Version</strong></a></li>
       {% for version in site.doc_versions reversed %}
-      <li {% if version.name == page.version %}class="current_version"{% endif %}><a href="{{ '/docs/' | append: version.name | relative_path }}/"><strong>{{ version.name }}
+      <li {% if version.name == page.version %}class="current_version"{% endif %}><a href="{{ '/docs/' | append: version.name | relative_url }}/"><strong>{{ version.name }}
           {%- if version.name == site.latest %} (latest){% endif -%}
           {%- if version.name == site.dev %} (dev){% endif -%}
 		      </strong></a></li>
