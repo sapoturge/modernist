@@ -91,6 +91,10 @@ ol li p:first-child {
 	font-weight: bold;
 }
 
+li ol:last-child, li ul:last-child {
+  margin-bottom: 0;
+}
+
 .previous {
 	left: 0;
 	right: auto;
